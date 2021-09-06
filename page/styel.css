@@ -1,0 +1,95 @@
+@import url(../fonts/fonts.css);
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+}
+
+span, p, a{
+    color: #fff;
+    font-family: bold;
+}
+
+body{
+    background-color: #000;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-items{
+    display: flex;
+    margin-bottom: 20px;
+    margin-right: 85px;
+}
+
+.wrapper{
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+}
+
+.box
+{
+display: flex;
+align-items: center;
+}
+.top-items p:nth-child(1){
+    width: 30%;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.top-items p:nth-child(2){
+    font-size: 16px;
+    margin-left: 40px;
+    border-left: 1px solid #fff;
+    padding: 0 10px;
+    width: calc(50% - 20%);
+}
+
+.bottom-items a{
+    font-size: 18px;
+}
+
+.bottom-items a:nth-child(1){
+    margin-right: 7px;
+}
+
+.bottom-items a:nth-child(2),
+.bottom-items a:nth-child(3),
+.bottom-items a:nth-child(4),
+.bottom-items a:nth-child(5),
+.bottom-items a:nth-child(6){
+    border-left: 1px solid #fff;
+    padding: 0 7px;
+}
+
+.bottom-items{
+    margin-right: 190px;
+    padding: 3px 15px;
+    border-bottom: 3px solid #fff;
+}
+
+.bottom-items a:nth-child(6){
+    color: #FF1332FF;
+}
+
+.change-language{
+    width: 50px;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF1332FF;
+}
+
+.change-language a:nth-child(1){
+    border-right: 1px solid #fff;
+}
