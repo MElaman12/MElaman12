@@ -241,12 +241,12 @@ body{
     margin-bottom: 30px;
 }
 
-.food-menu .pizza-menu, .salads {
+.food-menu .pizza-menu, .salad-menu .salads {
     display: flex;
     justify-content: center;    
 }
 
-.food-menu .pizza-menu .first-pizza , .salads .salad{
+.food-menu .pizza-menu .first-pizza , .salad-menu .salads .first-salad{
     width: 300px; height: fit-content;
     display: flex;
     flex-direction: column;
@@ -255,18 +255,20 @@ body{
     border-radius: 10px;
 }
 
-.food-menu .pizza-menu .first-pizza  img{
+.food-menu .pizza-menu .first-pizza  img, .salad-menu .salads .first-salad img{
     width: 220px;
     margin-bottom: 20px;
     margin-left: 35px;
 }
 
-.food-menu .pizza-menu .first-pizza span.title, .salads .salad span.title{
+.food-menu .pizza-menu .first-pizza span.title, .salad-menu .salads .first-salad span.title {
     color: #FF1332FF;
     font-family: bold;
     font-size: 20px;
     margin-bottom: 10px;
 }
+
+
 
 .food-menu .pizza-menu .first-pizza p.ingridients{
     font-family: bold;
@@ -274,9 +276,32 @@ body{
     margin-bottom: 30px;
 }
 
-.food-menu .pizza-menu .first-pizza p.price{
+.salad-menu .salads .first-salad p.storage{
+    font-size: 11px;
+    font-family: montserrat-bold;
+}
+
+.food-menu .pizza-menu .first-pizza p.price, .salad-menu .salads .first-salad span.price{
     font-family: bold;
     font-size: 20px;
+}
+
+.salad-menu .salads .first-salad .bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.salad-menu .salads .first-salad .bottom button
+{
+    width: fit-content; height: fit-content;
+    padding: 5px 2ex;
+    background-color: #FF1332FF;
+    color: #fff;
+    font-family: montserrat-bold;
+    font-size: 16px;
+    position: relative;
+    border-radius: 10px;
+    border: none;
 }
 
 .food-menu .pizza-menu .first-pizza p.scale{
