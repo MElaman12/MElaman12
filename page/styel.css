@@ -241,12 +241,12 @@ body{
     margin-bottom: 30px;
 }
 
-.food-menu .pizza-menu{
+.food-menu .pizza-menu, .salads {
     display: flex;
     justify-content: center;    
 }
 
-.food-menu .pizza-menu .first-pizza {
+.food-menu .pizza-menu .first-pizza , .salads .salad{
     width: 300px; height: fit-content;
     display: flex;
     flex-direction: column;
@@ -261,7 +261,7 @@ body{
     margin-left: 35px;
 }
 
-.food-menu .pizza-menu .first-pizza span.title{
+.food-menu .pizza-menu .first-pizza span.title, .salads .salad span.title{
     color: #FF1332FF;
     font-family: bold;
     font-size: 20px;
