@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styel.css">
     <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
 </head>
 <body>
 
@@ -14,30 +18,142 @@
         <div class="box">
         <img src="../icons/logo.png" class="logo" width="170px">
         
-        <div class="header">
-            
             <div class="top-items">
                 <p>Бесплатная доставка по городу</p>
 
                 <p>Звонок по номеру: +998 33 595 00 06</p>
+
+                
             </div>
 
-            <div class="bottom-items">
-                <a href="#">Пиццы</a>
-                <a href="#">Комбо</a>
-                <a href="#">Салаты</a>
-                <a href="#">Напитки</a>
-                <a href="#">Акции</a>
-                <a href="#">О нас</a>
+            <img  class='halal-logo' src="https://1000logos.net/wp-content/uploads/2021/02/Halal-logo.png" width="100px">
+
+    
+                 <div class="bottom-items">
+                      <a href="#">Пиццы</a>
+                      <a href="#">Комбо</a>
+                      <a href="#">Салаты</a>
+                      <a href="#">Напитки</a>
+                      <a href="#">Акции</a>
+                      <a href="#" class="about-us">О нас</a>
+                    </div>   
+                    <button class="cart">Корзина</button>
+
+            <div class="btns">
+                <div class="change-language">
+                    <a href="#" class="en">EN</a>
+                    <a href="#" class="ru">RU</a>
+                </div>
+                <button class="sign">Войти</button>
+                
             </div>
-            
         </div>
     </div>
-    <div class="change-language">
-        <a href="#">EN</a>
-        <a href="#">RU</a>
-    </div>
-    </div>
+            
 
+     <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src='../icons/slider1.png'>
+        </div>
+        <div class="swiper-slide">
+            <img src='../icons/slider2.png'>
+        </div>
+        <div class="swiper-slide">
+            <img src='../icons/slider3.png'>
+        </div>
+        <div class="swiper-slide">
+            <img src='../icons/slider4.png'>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+        
+        <div class="food-menu">
+            <div class="title">
+                <p>Пиццы</p>
+            </div>
+
+            <div class="pizza-menu">
+                <div class="first-pizza">
+                    
+                    <img src="../icons/1.png" >
+
+                    <span class="title">Пеперони</span>
+                    <p class="ingridients"></p>
+                    <p class="price"></p>
+                    <p class="scale">Выберите размер:</p>
+                    <div class="change-scale">
+                        <a href="#">Маленькая</a>
+                        <a href="#">Средняя</a>
+                        <a href="#">Большая</a>
+                    </div>
+                    <button class="add-cart">В корзину</button>
+                </div>
+
+                <div class="first-pizza" style="margin: 0 35px;">
+                    
+                    <img src="../icons/2.png" >
+
+                    <span class="title">Пеперони</span>
+                    <p class="ingridients"></p>
+                    <p class="price"></p>
+                    <p class="scale">Выберите размер:</p>
+                    <div class="change-scale">
+                        <a href="#">Маленькая</a>
+                        <a href="#">Средняя</a>
+                        <a href="#">Большая</a>
+                    </div>
+                    <button class="add-cart">В корзину</button>
+                </div>
+                <div class="first-pizza">
+                    
+                    <img src="../icons/3.png" >
+
+                    <span class="title">Пеперони</span>
+                    <p class="ingridients"></p>
+                    <p class="price"></p>
+                    <p class="scale">Выберите размер:</p>
+                    <div class="change-scale">
+                        <a href="#">Маленькая</a>
+                        <a href="#">Средняя</a>
+                        <a href="#">Большая</a>
+                    </div>
+                    <button class="add-cart">В корзину</button>
+                </div>
+                <p>Салаты</p>
+
+            </div>  
+                <!-- Салаты -->
+                <div class="salads">
+                    <div class="title">
+                        <p>Салаты</p>
+                    </div>
+                </div>
+            
+
+        </div>
+
+        <script src="./js/text.js"></script>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   
+
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+              pagination: {
+                el: ".swiper-pagination",
+              },
+            });
+
+            document.addEventListener('DOMContentLoaded', function () {
+      const slider = new ChiefSlider('.swiper', {
+        loop: true,
+        autoplay: true,
+        interval: 1000,
+      });
+    });
+          </script>
 </body>
 </html>

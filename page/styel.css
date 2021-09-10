@@ -1,64 +1,92 @@
+/* Подключаем шрифты */
 @import url(../fonts/fonts.css);
+/* --------------- */
 
+/* --------------- */
 *{
     padding: 0;
     box-sizing: border-box;
     margin: 0;
     text-decoration: none;
+    transition: 300ms;
 }
 
-span, p, a{
-    color: #fff;
-    font-family: bold;
+
+*::after{
+    transition: 300ms;
+}
+button{
+    cursor: pointer;
 }
 
 body{
     background-color: #000;
+    height: 200vh;
 }
 
-.header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/* --------------- */
 
-.top-items{
-    display: flex;
-    margin-bottom: 20px;
-    margin-right: 85px;
-}
 
+/* Стили хидора */
 .wrapper{
     width: 100%;
     height: 150px;
     margin: 10px 0;
+    position: relative;
 }
 
 .box
 {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* ------- Конец -------- */
+
+/* Стили сыновей хидора */
+.top-items{
+    display: flex;
+}
+
+.top-items p{color: #fff; font-family: montserrat-bold;}
+
 .top-items p:nth-child(1){
-    width: 30%;
+    width: 40%;
     text-transform: uppercase;
     font-size: 13px;
 }
 
 .top-items p:nth-child(2){
-    font-size: 16px;
-    margin-left: 40px;
+    font-size: 14px;
+    margin-left: 30px;
     border-left: 1px solid #fff;
     padding: 0 10px;
     width: calc(50% - 20%);
 }
 
+.wrapper .halal-logo{
+    position: absolute;
+    left: 47%;
+    border-left: 1px solid #fff;
+    padding: 0 10px;
+}
+
+.bottom-items{
+    padding: 5px 15px;
+    border-bottom: 3px solid #fff;
+    width: fit-content;
+    margin-right: 120px;
+}
+
 .bottom-items a{
-    font-size: 18px;
+    font-size: 15px;
+    color: #fff;
+    font-family: montserrat-bold;
 }
 
 .bottom-items a:nth-child(1){
-    margin-right: 7px;
+    margin-right: 5px;
 }
 
 .bottom-items a:nth-child(2),
@@ -67,29 +95,256 @@ align-items: center;
 .bottom-items a:nth-child(5),
 .bottom-items a:nth-child(6){
     border-left: 1px solid #fff;
-    padding: 0 7px;
+    padding: 0 5px;
 }
 
-.bottom-items{
-    margin-right: 190px;
-    padding: 3px 15px;
-    border-bottom: 3px solid #fff;
+.bottom-items a:nth-child(1):hover,
+.bottom-items a:nth-child(2):hover,
+.bottom-items a:nth-child(3):hover,
+.bottom-items a:nth-child(4):hover,
+.bottom-items a:nth-child(5):hover,
+.bottom-items a:nth-child(6):hover{
+    color:  #FF1332FF;
 }
 
-.bottom-items a:nth-child(6){
-    color: #FF1332FF;
+/* --------- Стили кнопок хидора  ---------*/
+
+.change-language a{
+    margin: 0 2px;
+    font-family: montserrat-bold ;
+    color: #fff;
+    font-size: 13px;
 }
 
 .change-language{
-    width: 50px;
+    width: 60px;
     height: auto;
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #FF1332FF;
+    border-radius: 20px;
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    z-index: 11;
+    overflow: hidden;
 }
 
 .change-language a:nth-child(1){
-    border-right: 1px solid #fff;
+    border-right: 2px solid #fff;
+    padding-right: 2px;
 }
+
+.change-language::after{
+   content: '';
+   width: 100%;
+    height: 100%;
+   position: absolute;
+   border-radius: 20px;
+   background: #fff;
+   left: -100%;
+}
+
+.change-language:hover::after{
+    left: 0%;
+    z-index: -1;
+}
+
+.change-language:hover .en, .change-language:hover .ru  {
+    color: #FF1332FF;
+}
+
+.change-language:hover .en{
+    border-right:  2px solid #000;
+}
+
+.sign{
+    width: 60px;
+    height: auto;
+    padding: 5px;
+    background-color: #fff;
+    color: #000;
+    font-family: bold;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px; right: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.cart{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    border: none;
+    color: #FF1332FF;
+    font-size: 16px;
+    font-family: bold;
+    background-color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+}
+/* Конец */
+
+/* ------------ Слайдер ------------ */
+
+.swiper{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.swiper-slide img {
+    display: block;
+    width: 60%;
+    border-radius: 20px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+/* Конец */
+
+
+/* Стили пиццы и т.д */
+
+.food-menu{
+    width: 100%;
+    height: fit-content;
+}
+
+.food-menu .title p{
+    color: #fff;
+    font-family: montserrat-bold;
+    margin-left: 100px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.food-menu .pizza-menu{
+    display: flex;
+    justify-content: center;    
+}
+
+.food-menu .pizza-menu .first-pizza {
+    width: 300px; height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.food-menu .pizza-menu .first-pizza  img{
+    width: 220px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+}
+
+.food-menu .pizza-menu .first-pizza span.title{
+    color: #FF1332FF;
+    font-family: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.food-menu .pizza-menu .first-pizza p.ingridients{
+    font-family: bold;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.food-menu .pizza-menu .first-pizza p.price{
+    font-family: bold;
+    font-size: 20px;
+}
+
+.food-menu .pizza-menu .first-pizza p.scale{
+    color: rgb(148, 149, 151);
+    font-family: bold;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.food-menu .first-pizza .change-scale{
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid #FF1332FF;
+    border-radius: 20px;
+    padding: 5px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food-menu .first-pizza .change-scale a{
+    color: #000;
+    font-family: bold;
+    margin: 0 5px;
+    font-size: 17.5px;
+}
+
+.food-menu .pizza-menu .first-pizza button{
+    color: #fff;
+    display: flex;
+    font-size: 20px;
+    font-family: bold;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: #FF1332FF;
+    border-radius: 25px;
+    border: none;
+    margin-top: 20px;
+    position: relative;
+    z-index: 11 ;
+    overflow: hidden;
+}
+
+.food-menu .pizza-menu .first-pizza button::after{
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    left: 0%;
+    top: -200%;
+    z-index: -1;
+    background-color: #fff;
+}
+
+.food-menu .pizza-menu .first-pizza button:hover:after{
+    top: 0;
+    left: 0;
+    right: 0%;
+}
+
+.food-menu .pizza-menu .first-pizza button:hover{
+    color: #FF1332FF;
+    box-shadow: 7px 7px 7px rgb(145, 145, 145);
+}
+
+.salads .title p{
+    margin-top: 20px;
+}
+
+
+

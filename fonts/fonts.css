@@ -18,3 +18,15 @@
     font-family: ultralight;
     src: url(./Gilroy-UltraLight.ttf );
 }
+/* ------ */
+@font-face {
+    font-family: montserrat-bold;
+    src: url(./Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: montserrat-black;
+    src: url(./Montserrat-Black.ttf);
+}
+
+
