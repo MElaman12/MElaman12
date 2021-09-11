@@ -8,13 +8,9 @@
     box-sizing: border-box;
     margin: 0;
     text-decoration: none;
-    transition: 300ms;
+    transition: 300ms !important;
 }
 
-
-*::after{
-    transition: 300ms;
-}
 button{
     cursor: pointer;
 }
@@ -22,6 +18,7 @@ button{
 body{
     background-color: #000;
     height: 200vh;
+    scroll-behavior: smooth;
 }
 
 /* --------------- */
@@ -130,6 +127,7 @@ body{
     right: 80px;
     z-index: 11;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .change-language a:nth-child(1){
@@ -145,6 +143,7 @@ body{
    border-radius: 20px;
    background: #fff;
    left: -100%;
+   transition: 300ms;
 }
 
 .change-language:hover::after{
@@ -261,7 +260,7 @@ body{
     margin-left: 35px;
 }
 
-.food-menu .pizza-menu .first-pizza span.title, .salad-menu .salads .first-salad span.title {
+.food-menu .pizza-menu .first-pizza span.title, .salad-menu .salads .first-salad span.salad-name{
     color: #FF1332FF;
     font-family: bold;
     font-size: 20px;
@@ -302,7 +301,42 @@ body{
     position: relative;
     border-radius: 10px;
     border: none;
+    z-index: 11;
 }
+
+
+.salad-menu .salads .first-salad .bottom button::after{
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%; 
+    background-color: #fff;
+    z-index: -1;
+    top: 0;
+    right: -100%;
+    border-radius: 10px;
+    transition: 300ms;
+}
+
+/* .salad-menu .salads .first-salad .bottom button::before{
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%; 
+    background-color: #fff;
+    z-index: -1;
+    top: 0;
+    left: -100%;
+    border-radius: 10px;
+    transition: 300ms;
+} */
+
+.salad-menu .salads .first-salad .bottom button:hover:before, .salad-menu .salads .first-salad .bottom button:hover::after{
+    left: 0%;
+}
+
+.salad-menu .salads .first-salad .bottom button:hover{
+    color: #FF1332FF;
+}
+
 
 .food-menu .pizza-menu .first-pizza p.scale{
     color: rgb(148, 149, 151);
@@ -354,6 +388,7 @@ body{
     top: -200%;
     z-index: -1;
     background-color: #fff;
+    transition: 300ms;
 }
 
 .food-menu .pizza-menu .first-pizza button:hover:after{
@@ -369,6 +404,10 @@ body{
 
 .salads .title p{
     margin-top: 20px;
+}
+
+.first-salad .bottom{
+    margin: 15px 0;
 }
 
 
