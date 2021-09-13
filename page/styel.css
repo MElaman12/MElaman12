@@ -2,7 +2,6 @@
 @import url(../fonts/fonts.css);
 /* --------------- */
 
-/* --------------- */
 *{
     padding: 0;
     box-sizing: border-box;
@@ -20,7 +19,6 @@ body{
     height: 200vh;
     scroll-behavior: smooth;
 }
-
 /* --------------- */
 
 
@@ -38,7 +36,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-
 /* ------- Конец -------- */
 
 /* Стили сыновей хидора */
@@ -62,22 +59,24 @@ body{
     width: calc(50% - 20%);
 }
 
+.top-items p:nth-child(2):hover{text-decoration: underline; cursor: pointer;}
+
 .wrapper .halal-logo{
     position: absolute;
     left: 47%;
-    border-left: 1px solid #fff;
     padding: 0 10px;
 }
 
 .bottom-items{
     padding: 5px 15px;
-    border-bottom: 3px solid #fff;
     width: fit-content;
     margin-right: 120px;
+    background-color: #FF1332FF;
+    border-radius: 4px;
 }
 
 .bottom-items a{
-    font-size: 15px;
+    font-size: 15.5px;
     color: #fff;
     font-family: montserrat-bold;
 }
@@ -91,7 +90,6 @@ body{
 .bottom-items a:nth-child(4),
 .bottom-items a:nth-child(5),
 .bottom-items a:nth-child(6){
-    border-left: 1px solid #fff;
     padding: 0 5px;
 }
 
@@ -174,6 +172,14 @@ body{
     font-size: 16px;
 }
 
+.blur-block{
+    width: 100%; height: 100vh;
+    position: relative;
+    z-index: 999999999;
+    background-color: rgba(255,255,255, 0.95);
+    top: 0;
+}
+
 .cart{
     width: fit-content;
     height: fit-content;
@@ -185,7 +191,7 @@ body{
     background-color: #fff;
     border-radius: 20px;
     position: absolute;
-    top: 50%;
+    top: 47%;
     right: 30px;
 }
 /* Конец */
@@ -210,8 +216,6 @@ body{
     align-items: center;
 }
 
-
-
 .swiper-slide img {
     display: block;
     width: 60%;
@@ -221,18 +225,15 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
   }
-
 /* Конец */
 
-
 /* Стили пиццы и т.д */
-
 .food-menu{
     width: 100%;
     height: fit-content;
 }
 
-.food-menu .title p{
+.food-menu .title p, .drink-menu .title p{
     color: #fff;
     font-family: montserrat-bold;
     margin-left: 100px;
@@ -240,12 +241,12 @@ body{
     margin-bottom: 30px;
 }
 
-.food-menu .pizza-menu, .salad-menu .salads {
+.food-menu .pizza-menu, .salad-menu .salads , .drink-menu .drinks{
     display: flex;
     justify-content: center;    
 }
 
-.food-menu .pizza-menu .first-pizza , .salad-menu .salads .first-salad{
+.food-menu .pizza-menu .first-pizza , .salad-menu .salads .first-salad, .drink-menu .drinks .first-drink {
     width: 300px; height: fit-content;
     display: flex;
     flex-direction: column;
@@ -254,13 +255,15 @@ body{
     border-radius: 10px;
 }
 
-.food-menu .pizza-menu .first-pizza  img, .salad-menu .salads .first-salad img{
+
+
+.food-menu .pizza-menu .first-pizza  img, .salad-menu .salads .first-salad img, .drink-menu .drinks .first-drink img{
     width: 220px;
     margin-bottom: 20px;
     margin-left: 35px;
 }
 
-.food-menu .pizza-menu .first-pizza span.title, .salad-menu .salads .first-salad span.salad-name{
+.food-menu .pizza-menu .first-pizza span.title, .salad-menu .salads .first-salad span.salad-name, .drink-menu .drinks .first-drink span.drink-name{
     color: #FF1332FF;
     font-family: bold;
     font-size: 20px;
@@ -275,22 +278,23 @@ body{
     margin-bottom: 30px;
 }
 
-.salad-menu .salads .first-salad p.storage{
+.salad-menu .salads .first-salad p.storage, .drink-menu .drinks .first-drink p.storage{
     font-size: 11px;
     font-family: montserrat-bold;
+    margin-bottom: 30px;
 }
 
-.food-menu .pizza-menu .first-pizza p.price, .salad-menu .salads .first-salad span.price{
+.food-menu .pizza-menu .first-pizza p.price, .salad-menu .salads .first-salad span.price, .drink-menu .drinks .first-drink span.price{
     font-family: bold;
     font-size: 20px;
 }
 
-.salad-menu .salads .first-salad .bottom{
+.salad-menu .salads .first-salad .bottom, .drink-menu .drinks .first-drink .bottom{
     display: flex;
     justify-content: space-between;
 }
 
-.salad-menu .salads .first-salad .bottom button
+.salad-menu .salads .first-salad .bottom button, .drink-menu .drinks .first-drink .bottom button
 {
     width: fit-content; height: fit-content;
     padding: 5px 2ex;
@@ -302,22 +306,12 @@ body{
     border-radius: 10px;
     border: none;
     z-index: 11;
+    overflow: hidden;
 }
 
 
-.salad-menu .salads .first-salad .bottom button::after{
-    content: '';
-    position: absolute;
-    width: 100%; height: 100%; 
-    background-color: #fff;
-    z-index: -1;
-    top: 0;
-    right: -100%;
-    border-radius: 10px;
-    transition: 300ms;
-}
 
-/* .salad-menu .salads .first-salad .bottom button::before{
+.salad-menu .salads .first-salad .bottom button::before{
     content: '';
     position: absolute;
     width: 100%; height: 100%; 
@@ -327,14 +321,41 @@ body{
     left: -100%;
     border-radius: 10px;
     transition: 300ms;
-} */
+}
 
-.salad-menu .salads .first-salad .bottom button:hover:before, .salad-menu .salads .first-salad .bottom button:hover::after{
+.first-drink:nth-child(2){
+    margin: 0 35px ;
+}
+
+.drink-menu .drinks .first-drink .bottom button::before{
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%; 
+    background-color: #fff;
+    z-index: -1;
+    top: 0;
+    left: -100%;
+    border-radius: 10px;
+    transition: 300ms;
+} 
+
+.salad-menu .salads .first-salad .bottom button:hover:before{
     left: 0%;
+}
+
+.drink-menu .drinks .first-drink .bottom button:hover::before
+{
+    left: 0%;
+}
+
+.drink-menu .drinks .first-drink .bottom button:hover{
+    color: #FF1332FF;
+    box-shadow: 7px 7px 7px rgb(145, 145, 145);
 }
 
 .salad-menu .salads .first-salad .bottom button:hover{
     color: #FF1332FF;
+    box-shadow: 7px 7px 7px rgb(145, 145, 145);
 }
 
 
@@ -406,9 +427,11 @@ body{
     margin-top: 20px;
 }
 
+.center{
+    margin: 0 35px;
+}
+
 .first-salad .bottom{
     margin: 15px 0;
 }
-
-
 
