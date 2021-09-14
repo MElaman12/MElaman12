@@ -173,11 +173,83 @@ body{
 }
 
 .blur-block{
-    width: 100%; height: 100vh;
-    position: relative;
-    z-index: 999999999;
-    background-color: rgba(255,255,255, 0.95);
-    top: 0;
+    width: 100%; height: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: -100%;
+    backdrop-filter: blur(7px);
+}
+
+.inputs .name-inpt img{
+    margin:5px 0;
+}
+
+.inputs .name-inpt input::placeholder{
+    color: #FF1332FF;
+    font-family: bold;
+    font-size: 18px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputs .name-inpt{
+    display: flex;
+    margin: 35px 0;
+}
+
+.inputs .number-inpt input
+::-webkit-outer-spin-button,
+.inputs .number-inpt input::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+.inputs .name-inpt input{
+    margin: 0 6px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(153, 153, 153);
+    outline: none;
+    font-size: 17px;
+    font-family: bold;
+    color: #FF1332FF;
+}   
+
+.blur-block .register-block{
+    width: 320px; height: 320px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.blur-block .register-block .top{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(117, 113, 113);
+    padding: 3px 0;
+}
+
+.blur-block .register-block .top a{
+    font-family: bold;
+    font-size: 20px;
+}
+
+.blur-block .register-block .top a:nth-child(1){
+    color: #B9B9B9FF;
+}
+
+.blur-block .register-block .top a:nth-child(2){
+    color: #FF1332FF;
 }
 
 .cart{
@@ -254,8 +326,6 @@ body{
     background-color: white;
     border-radius: 10px;
 }
-
-
 
 .food-menu .pizza-menu .first-pizza  img, .salad-menu .salads .first-salad img, .drink-menu .drinks .first-drink img{
     width: 220px;
@@ -434,4 +504,3 @@ body{
 .first-salad .bottom{
     margin: 15px 0;
 }
-
