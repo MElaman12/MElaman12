@@ -181,11 +181,11 @@ body{
     backdrop-filter: blur(7px);
 }
 
-.inputs .name-inpt img{
-    margin:5px 0;
+.inputs .name-inpt img, .inputs .number-inpt img{
+    margin: 10px 0;
 }
 
-.inputs .name-inpt input::placeholder{
+.inputs .name-inpt input::placeholder, .inputs .number-inpt  input::placeholder{
     color: #FF1332FF;
     font-family: bold;
     font-size: 18px;
@@ -198,9 +198,9 @@ body{
     flex-direction: column;
 }
 
-.inputs .name-inpt{
+.inputs .name-inpt, .inputs .number-inpt{
     display: flex;
-    margin: 35px 0;
+    margin: 10px 0;
 }
 
 .inputs .number-inpt input
@@ -211,7 +211,7 @@ body{
     margin: 0; 
 }
 
-.inputs .name-inpt input{
+.inputs .name-inpt input, .inputs .number-inpt input{
     margin: 0 6px;
     padding: 5px;
     border: none;
