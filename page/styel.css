@@ -15,6 +15,10 @@ button{
 }
 
 body{
+    /* background-image: url(../icons/пицца.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; */
     background-color: #000;
     height: 200vh;
     scroll-behavior: smooth;
@@ -93,13 +97,9 @@ body{
     padding: 0 5px;
 }
 
-.bottom-items a:nth-child(1):hover,
-.bottom-items a:nth-child(2):hover,
-.bottom-items a:nth-child(3):hover,
-.bottom-items a:nth-child(4):hover,
-.bottom-items a:nth-child(5):hover,
-.bottom-items a:nth-child(6):hover{
-    color:  #FF1332FF;
+.bottom-items a:hover
+{
+        color: #000;
 }
 
 /* --------- Стили кнопок хидора  ---------*/
@@ -203,14 +203,6 @@ body{
     margin: 10px 0;
 }
 
-.inputs .number-inpt input
-::-webkit-outer-spin-button,
-.inputs .number-inpt input::-webkit-inner-spin-button
-{
-    -webkit-appearance: none;
-    margin: 0; 
-}
-
 .inputs .name-inpt input, .inputs .number-inpt input{
     margin: 0 6px;
     padding: 5px;
@@ -222,6 +214,38 @@ body{
     color: #FF1332FF;
 }   
 
+.blur-block .inputs .send-code{
+    width: fit-content; height: fit-content;
+    padding: 15px 30px;
+    font-family: bold ;
+    font-size: 20px;
+    background-color: #FF1332FF;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    margin: 35px 0;
+    position: relative;
+    z-index: 11;
+    overflow: hidden;
+}
+
+.blur-block .inputs .send-code::after{
+    width: 100%; height: 100%;
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    background-color: #000;
+    z-index: -1;
+    transition: 200ms;
+    border-radius: 30px;
+}
+
+.blur-block .inputs .send-code:hover::after{
+    left: 0;
+    top: 0;
+}
+
 .blur-block .register-block{
     width: 320px; height: 320px;
     background-color: #fff;
@@ -230,6 +254,14 @@ body{
     transform: translate(-50%, -50%);
     border-radius: 10px;
     padding: 15px;
+}
+
+.blur-block .close-icon{
+    position: absolute;
+    right: 50px;
+    top: 60px;
+    cursor: pointer;
+    width: 60px;
 }
 
 .blur-block .register-block .top{
@@ -319,7 +351,7 @@ body{
 }
 
 .food-menu .pizza-menu .first-pizza , .salad-menu .salads .first-salad, .drink-menu .drinks .first-drink {
-    width: 300px; height: fit-content;
+    width: 300px; height: 505px;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -331,6 +363,7 @@ body{
     width: 220px;
     margin-bottom: 20px;
     margin-left: 35px;
+    transition: 300ms;
 }
 
 .food-menu .pizza-menu .first-pizza span.title, .salad-menu .salads .first-salad span.salad-name, .drink-menu .drinks .first-drink span.drink-name{
@@ -339,8 +372,6 @@ body{
     font-size: 20px;
     margin-bottom: 10px;
 }
-
-
 
 .food-menu .pizza-menu .first-pizza p.ingridients{
     font-family: bold;
@@ -378,8 +409,6 @@ body{
     z-index: 11;
     overflow: hidden;
 }
-
-
 
 .salad-menu .salads .first-salad .bottom button::before{
     content: '';
@@ -428,7 +457,6 @@ body{
     box-shadow: 7px 7px 7px rgb(145, 145, 145);
 }
 
-
 .food-menu .pizza-menu .first-pizza p.scale{
     color: rgb(148, 149, 151);
     font-family: bold;
@@ -447,12 +475,14 @@ body{
     justify-content: space-between;
 }
 
-.food-menu .first-pizza .change-scale a{
+.food-menu .first-pizza .change-scale span{
     color: #000;
     font-family: bold;
     margin: 0 5px;
     font-size: 17.5px;
+    cursor: pointer;
 }
+
 
 .food-menu .pizza-menu .first-pizza button{
     color: #fff;
