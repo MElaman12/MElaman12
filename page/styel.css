@@ -351,7 +351,7 @@ body{
 }
 
 .food-menu .pizza-menu .first-pizza , .salad-menu .salads .first-salad, .drink-menu .drinks .first-drink {
-    width: 300px; height: 505px;
+    width: 300px; height: 490px;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -359,11 +359,19 @@ body{
     border-radius: 10px;
 }
 
+.pore{
+
+    display: flex; align-items: center; justify-content: center;
+}
+
+.food-menu .pizza-menu .first-pizza  img{
+    margin: 0% !important;
+}
+
 .food-menu .pizza-menu .first-pizza  img, .salad-menu .salads .first-salad img, .drink-menu .drinks .first-drink img{
     width: 220px;
     margin-bottom: 20px;
     margin-left: 35px;
-    transition: 300ms;
 }
 
 .food-menu .pizza-menu .first-pizza span.title, .salad-menu .salads .first-salad span.salad-name, .drink-menu .drinks .first-drink span.drink-name{
@@ -371,6 +379,10 @@ body{
     font-family: bold;
     font-size: 20px;
     margin-bottom: 10px;
+}
+
+.salad-menu .salads .first-salad, .drink-menu .drinks .first-drink{
+    height: 380px;
 }
 
 .food-menu .pizza-menu .first-pizza p.ingridients{
