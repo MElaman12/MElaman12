@@ -397,32 +397,6 @@ body{
     margin-bottom: 30px;
 }
 
-.unvisible{
-    animation: unvisible 1 1s; 
-}
-
-@keyframes unvisible{
-    0%{
-        opacity: 1;
-    }
-    25%{
-        opacity: 0.8;
-    }
-    50%{
-        opacity: 0.6;
-    }
-    75%{
-        opacity: 0.4;
-    }
-    85%{
-        opacity: 0.2;
-    }
-    100%{
-        opacity: 0;
-        display: none;
-    }
-}
-
 .food-menu .pizza-menu .first-pizza p.price, .salad-menu .salads .first-salad span.price, .drink-menu .drinks .first-drink span.price{
     font-family: bold;
     font-size: 20px;
