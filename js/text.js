@@ -1,7 +1,7 @@
 let pizzaStats = [
     {
         ingridients: 'Соус белый, колбаса п/к, кукурузы, помидоры, маслины, индейка сыр.',
-        price: '39000 сум'
+        price: '80000 сум'
     }
 ];
 
@@ -45,11 +45,11 @@ let saladTitle = document.querySelectorAll('.salad-name');
 let saladPrice = document.querySelectorAll('.first-salad .price')
 let saladStorage = document.querySelectorAll('.first-salad .storage')
 
-// ------
+// // ------
 
 let ingridients = document.querySelectorAll('.ingridients');
 
-let price = document.querySelectorAll('.first-pizza .price');
+let PizzaPrice = document.querySelectorAll('.first-pizza .price');
 // 
 
 let drinkName = document.querySelectorAll('.first-drink .drink-name')
@@ -59,7 +59,7 @@ let drinkPrice = document.querySelectorAll('.first-drink .price')
 let drinkStorage = document.querySelectorAll('.first-drink .storage')
 
 for(let i = 0; saladStats.length > 0; i++){
-    price[i].textContent = pizzaStats[0].price;
+    PizzaPrice[i].textContent = pizzaStats[0].price;
 
     ingridients[i].textContent = pizzaStats[0].ingridients;
     
