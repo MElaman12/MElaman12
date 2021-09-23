@@ -15,16 +15,80 @@ button{
 }
 
 body{
-    /* background-image: url(../icons/пицца.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat; */
-    background-color: #000;
-    height: 200vh;
+    width: 100%;
+    height: fit-content;
     scroll-behavior: smooth;
+    background-color: #000;
 }
 /* --------------- */
 
+.load-animation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1111;
+}
+
+.load-animation p{
+    position: absolute;
+    top: 40%;
+    transition: 500ms;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #FF1332FF;
+    font-size: 65px;
+    font-family: bold;
+}
+
+.load-animation .icon{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%; top: 60%;
+}
+.animate-rotate{
+    animation: iconRotateAnimate 700ms infinite;
+}
+
+.load-animation .icon img.animate{
+    animation: loadAnimate  2.2s infinite ease;
+    margin-top: 600px;
+}
+
+@keyframes loadAnimate {
+    0%{
+        margin-top:600px;
+    }
+    50%,100%{
+        margin: 0px;
+    }
+}
+
+.load-animation .icon
+{
+    width: fit-content; height: fit-content;
+}
+
+@keyframes iconRotateAnimate {
+        0%{
+            transform: rotateX(0);
+        }
+        
+        25%{
+            transform: rotateX(45deg);
+        }
+
+        50%{
+            transform: rotateX(90deg);
+        }
+
+        100%{
+    transform: rotateX(180deg);
+        }
+}
+/* ------------- */
 
 /* Стили хидора */
 .wrapper{
@@ -101,7 +165,6 @@ body{
 {
         color: #000;
 }
-
 /* --------- Стили кнопок хидора  ---------*/
 
 .change-language a{

@@ -6,17 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styel.css">
     <title>Document</title>
-    <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper/swiper-bundle.min.css"
-  />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+ 
+  <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="../js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+        </script>
 </head>
 <body>
+    
+    <div class="load-animation">
+        <p>Загрузка.</p>
 
+        <div class="icon">
+            <img  src="../icons/pizza-slice.png" alt="Error">
+            <img  src="../icons/pizza-slice.png" alt="Error">
+            <img  src="../icons/pizza-slice.png" alt="Error">
+        </div>
+
+    </div>
+    
     <div class="wrapper">
 
         <div class="box">
-        <img src="../icons/logo.png" class="logo" width="170px">
+        <img src="../icons/logo.png" class="logo animate__animated animate__flipInY" width="170px">
         
             <div class="top-items">
                 <p>Бесплатная доставка по городу</p>
@@ -29,7 +43,7 @@
             <img  class='halal-logo' src="https://1000logos.net/wp-content/uploads/2021/02/Halal-logo.png" width="100px">
 
     
-                 <div class="bottom-items">
+                 <div class="bottom-items animate__animated animate__zoomInDown">
                       <a href="#">Пиццы</a>
                       <a href="#">Комбо</a>
                       <a href="#">Салаты</a>
@@ -180,7 +194,7 @@
 
                         <div class="first-salad center">
                             
-                            <img src="../icons/4.png" >
+                            <img src="../icons/5.png" >
                             
                             <span class="salad-name"> </span>
                             <p class="storage"> </p>
