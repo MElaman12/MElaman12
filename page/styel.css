@@ -49,7 +49,7 @@ body{
 .load-animation .icon img{position: absolute; transition: 3s;}
 
 .animate-Scale{
-    animation: iconRotateAnimate 500bms 1 ease;
+    animation: iconRotateAnimate 700ms 1 ease;
     animation-delay: 500ms;
 }
 

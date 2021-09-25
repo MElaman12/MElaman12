@@ -2,5 +2,5 @@
     "editor.fontFamily": "'Fira Code',monospace",
     "files.autoSave": "afterDelay",
     "editor.fontLigatures": true,
-    "editor.fontWeight": "bold"
+    "editor.fontWeight": "300"
 }

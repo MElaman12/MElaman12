@@ -5,7 +5,7 @@ let blurBlock  = document.querySelector('.blur-block')
 let animationText = document.querySelector('.load-animation p')
 let animationTextFather = document.querySelector('.load-animation .title')
 let animationBlock = document.querySelector('.load-animation')
-let animationIcon = document.querySelectorAll('.load-animation img')
+let animationIcon = document.querySelectorAll('.load-animation .icon img')
 let animationIconFather = document.querySelector('.load-animation .icon')
 
 function textAnimate() {
@@ -13,14 +13,16 @@ function textAnimate() {
       animationText.textContent = 'Загрузка..';
    },1000);
 
-     return animationText.textContent = 'Загрузка.'; 
+    setInterval( () =>{
+       animationText.textContent = 'Загрузка...'
+      },1500); 
 }
 
 window.onload = () => {
       animationText.textContent = textAnimate();
+   
 }
 
-let iconFunc = setInterval( () => {
     for(let item of animationIcon){
     animationIconFather.classList.add('animate');
 
@@ -35,14 +37,67 @@ let iconFunc = setInterval( () => {
        animationIcon[2].style.position = 'absolute'
        animationIcon[2].style.marginLeft = '-40px'
        item.classList.remove('animate');
-       
-       setTimeout( () => {animationIcon[1].classList.add('animate-Scale'); animationIcon[0].classList.remove('animate-Scale'); clearInterval(iconFunc)},1300)
-       setTimeout( () => {animationIcon[2].classList.add('animate-Scale'); animationIcon[1].classList.remove('animate-Scale'); animationIcon[1].classList.remove('animate-Scale') },2300)
-       setTimeout( () => {animationIcon[0].classList.add('animate-Scale'); animationIcon[2].classList.remove('animate-Scale'); animationIcon[1].classList.remove('animate-Scale')},2800)
-       clearInterval(iconFunc);
+
+      if(item.alt == 'Error'){
+         setTimeout( () => {
+            animationIcon[1].classList.add('animate-Scale')
+         },800)
+         setTimeout( () => {
+            if(animationIcon[1].classList.value == 'animate-Scale'){
+               animationIcon[1].classList.remove('animate-Scale');
+               animationIcon[2].classList.add('animate-Scale');
+            }
+         },1800)
+         setTimeout( () => {
+            if(animationIcon[2].classList.value == 'animate-Scale'){
+               animationIcon[2].classList.remove('animation-Scale');
+               animationIcon[0].classList.add('animate-Scale')
+            }
+         },2500)
+
+
+         setTimeout( () => {
+            
+            setTimeout( () => {
+               animationIcon[1].classList.add('animate-Scale')
+               animationIcon[0].classList.remove('animate-Scale')
+               animationIcon[2].classList.remove('animate-Scale')
+            },800)
+            setTimeout( () => {
+               if(animationIcon[1].classList.value == 'animate-Scale'){
+                  animationIcon[1].classList.remove('animate-Scale');
+                  animationIcon[2].classList.add('animate-Scale');
+               }
+            },1800)
+            setTimeout( () => {
+               if(animationIcon[2].classList.value == 'animate-Scale'){
+                  animationIcon[2].classList.remove('animation-Scale');
+                  animationIcon[0].classList.add('animate-Scale')
+               }
+            },2500)
+         },3500);
+
+         setTimeout( () => {
+
+            let right = 660;
+           let Interval = setInterval( () =>{
+               
+                  if(right == 2000){
+                     clearInterval(Interval);
+                     console.log('Success!');
+                  } else{
+                     right = right + 13
+                  } 
+                 animationIcon[0].style.right = `${right}px` 
+            },0.1)
+            
+            setTimeout
+
+         },7500)
+      }
+
     },1500);
-    }
-},10);
+   }
 
 signBtn.onclick = () => {
     event.preventDefault();
