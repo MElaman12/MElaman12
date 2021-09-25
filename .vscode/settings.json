@@ -1,4 +1,6 @@
 {
-    "editor.fontFamily": "Input Sans, Input Mono",
-    "files.autoSave": "afterDelay"
+    "editor.fontFamily": "'Fira Code',monospace",
+    "files.autoSave": "afterDelay",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "bold"
 }
