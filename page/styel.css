@@ -20,6 +20,7 @@ body{
     scroll-behavior: smooth;
     background-color: #000;
 }
+
 /* --------------- */
 
 .load-animation{
@@ -77,150 +78,56 @@ body{
 
 /* ------------- */
 
-/* Стили хидора */
-.wrapper{
-    width: 100%;
-    height: 150px;
-    margin: 10px 0;
-    position: relative;
+header{
+    padding: 0 100px;
+    display: flex; align-items: center;
 }
 
-.box
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-/* ------- Конец -------- */
-
-/* Стили сыновей хидора */
-.top-items{
-    display: flex;
+header .logo img{
+    width: 200px;
+    margin-right: 30px;
 }
 
-.top-items p{color: #fff; font-family: montserrat-bold;}
-
-.top-items p:nth-child(1){
-    width: 40%;
-    text-transform: uppercase;
-    font-size: 13px;
-}
-
-.top-items p:nth-child(2){
-    font-size: 14px;
-    margin-left: 30px;
-    border-left: 1px solid #fff;
-    padding: 0 10px;
-    width: calc(50% - 20%);
-}
-
-.top-items p:nth-child(2):hover{text-decoration: underline; cursor: pointer;}
-
-.wrapper .halal-logo{
-    position: absolute;
-    left: 47%;
-    padding: 0 10px;
-}
-
-.bottom-items{
-    padding: 5px 15px;
-    width: fit-content;
-    margin-right: 120px;
-    background-color: #FF1332FF;
-    border-radius: 4px;
-}
-
-.bottom-items a{
-    font-size: 15.5px;
+header .info span:nth-child(1){
     color: #fff;
     font-family: montserrat-bold;
+    display: inline-block;
+    width: 210px;
+    font-size: 17px;
 }
 
-.bottom-items a:nth-child(1){
+header .info span.callText{
+    color: #fff;
+    font-family: montserrat-bold;
+    display: inline-block;
+    width: 170px;
+}
+
+header .info .line{width: 2px; height: 40px; background-color: #9C9D9EFF; display: inline-block; margin: -5px 10px;}
+
+header .info img{
+    width: 100px;
+    margin-bottom: -20px;
+}
+
+header .section {margin-top: 40px; background-color: #FF1332FF; padding: 5px; border-radius: 3px; width: fit-content;}
+header .section a{
+    color: #fff;
+    font-family: montserrat-bold;
+    font-size: 18px;
+    transition: 300ms;
     margin-right: 5px;
 }
 
-.bottom-items a:nth-child(2),
-.bottom-items a:nth-child(3),
-.bottom-items a:nth-child(4),
-.bottom-items a:nth-child(5),
-.bottom-items a:nth-child(6){
-    padding: 0 5px;
-}
+header .section a:nth-child(1):hover{color: #000;}
+header .section a:nth-child(2):hover{color: #000;}
+header .section a:nth-child(3):hover{color: #000;}
+header .section a:nth-child(4):hover{color: #000;}
+header .section a:nth-child(5):hover{color: #000;}
+header .section a:nth-child(6):hover{color: #000;}
 
-.bottom-items a:hover
-{
-        color: #000;
-}
-/* --------- Стили кнопок хидора  ---------*/
+/* ------------ */
 
-.change-language a{
-    margin: 0 2px;
-    font-family: montserrat-bold ;
-    color: #fff;
-    font-size: 13px;
-}
-
-.change-language{
-    width: 60px;
-    height: auto;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FF1332FF;
-    border-radius: 20px;
-    position: absolute;
-    top: 20px;
-    right: 80px;
-    z-index: 11;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.change-language a:nth-child(1){
-    border-right: 2px solid #fff;
-    padding-right: 2px;
-}
-
-.change-language::after{
-   content: '';
-   width: 100%;
-    height: 100%;
-   position: absolute;
-   border-radius: 20px;
-   background: #fff;
-   left: -100%;
-   transition: 300ms;
-}
-
-.change-language:hover::after{
-    left: 0%;
-    z-index: -1;
-}
-
-.change-language:hover .en, .change-language:hover .ru  {
-    color: #FF1332FF;
-}
-
-.change-language:hover .en{
-    border-right:  2px solid #000;
-}
-
-.sign{
-    width: 60px;
-    height: auto;
-    padding: 5px;
-    background-color: #fff;
-    color: #000;
-    font-family: bold;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 20px; right: 10px;
-    border-radius: 20px;
-    font-size: 16px;
-}
 
 .blur-block{
     width: 100%; height: 100%;
@@ -372,9 +279,9 @@ body{
 
 .swiper-slide img {
     display: block;
-    width: 60%;
+    width: 80%;
     border-radius: 20px;
-    height: 300px;
+    height: 400px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

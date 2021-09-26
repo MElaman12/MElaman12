@@ -1,114 +1,116 @@
 let price = document.querySelectorAll('.first-pizza .price');
-let signBtn = document.querySelector('.sign');
+// let signBtn = document.querySelector('.sign');
 let blurBlock  = document.querySelector('.blur-block')
-// -------
-let animationText = document.querySelector('.load-animation p')
-let animationTextFather = document.querySelector('.load-animation .title')
-let animationBlock = document.querySelector('.load-animation')
-let animationIcon = document.querySelectorAll('.load-animation .icon img')
-let animationIconFather = document.querySelector('.load-animation .icon')
 
-function textAnimate() {
-   setInterval(() => {
-      animationText.textContent = 'Загрузка..';
-   },1000);
+// --------------------------------------------------------------
+// let animationText = document.querySelector('.load-animation p')
+// let animationTextFather = document.querySelector('.load-animation .title')
+// let animationBlock = document.querySelector('.load-animation')
+// let animationIcon = document.querySelectorAll('.load-animation .icon img')
+// let animationIconFather = document.querySelector('.load-animation .icon')
 
-    setInterval( () =>{
-       animationText.textContent = 'Загрузка...'
-      },1500); 
-}
+// function textAnimate() {
+//    setInterval(() => {
+//       animationText.textContent = 'Загрузка..';
+//    },1000);
 
-window.onload = () => {
-      animationText.textContent = textAnimate();
+//     setInterval( () =>{
+//        animationText.textContent = 'Загрузка...'
+//       },1500); 
+// }
+
+// window.onload = () => {
+//       animationText.textContent = textAnimate();
    
-}
+// }
 
-    for(let item of animationIcon){
-    animationIconFather.classList.add('animate');
+//     for(let item of animationIcon){
+//     animationIconFather.classList.add('animate');
 
-    setTimeout( () => {
-       animationIconFather.classList.remove('animate');
-       animationIcon[0].style.position = 'absolute'
-       animationIcon[0].style.marginLeft = '80px'
-       // 
-       animationIcon[1].style.position = 'absolute'
-       animationIcon[1].style.marginLeft = '-170px'
-       // 
-       animationIcon[2].style.position = 'absolute'
-       animationIcon[2].style.marginLeft = '-40px'
-       item.classList.remove('animate');
+//     setTimeout( () => {
+//        animationIconFather.classList.remove('animate');
+//        animationIcon[0].style.position = 'absolute'
+//        animationIcon[0].style.marginLeft = '80px'
+//        // 
+//        animationIcon[1].style.position = 'absolute'
+//        animationIcon[1].style.marginLeft = '-170px'
+//        // 
+//        animationIcon[2].style.position = 'absolute'
+//        animationIcon[2].style.marginLeft = '-40px'
+//        item.classList.remove('animate');
 
-      if(item.alt == 'Error'){
-         setTimeout( () => {
-            animationIcon[1].classList.add('animate-Scale')
-         },800)
-         setTimeout( () => {
-            if(animationIcon[1].classList.value == 'animate-Scale'){
-               animationIcon[1].classList.remove('animate-Scale');
-               animationIcon[2].classList.add('animate-Scale');
-            }
-         },1800)
-         setTimeout( () => {
-            if(animationIcon[2].classList.value == 'animate-Scale'){
-               animationIcon[2].classList.remove('animation-Scale');
-               animationIcon[0].classList.add('animate-Scale')
-            }
-         },2500)
+//       if(item.alt == 'Error'){
+//          setTimeout( () => {
+//             animationIcon[1].classList.add('animate-Scale')
+//          },800)
+//          setTimeout( () => {
+//             if(animationIcon[1].classList.value == 'animate-Scale'){
+//                animationIcon[1].classList.remove('animate-Scale');
+//                animationIcon[2].classList.add('animate-Scale');
+//             }
+//          },1800)
+//          setTimeout( () => {
+//             if(animationIcon[2].classList.value == 'animate-Scale'){
+//                animationIcon[2].classList.remove('animation-Scale');
+//                animationIcon[0].classList.add('animate-Scale')
+//             }
+//          },2500)
 
 
-         setTimeout( () => {
+//          setTimeout( () => {
             
-            setTimeout( () => {
-               animationIcon[1].classList.add('animate-Scale')
-               animationIcon[0].classList.remove('animate-Scale')
-               animationIcon[2].classList.remove('animate-Scale')
-            },800)
-            setTimeout( () => {
-               if(animationIcon[1].classList.value == 'animate-Scale'){
-                  animationIcon[1].classList.remove('animate-Scale');
-                  animationIcon[2].classList.add('animate-Scale');
-               }
-            },1800)
-            setTimeout( () => {
-               if(animationIcon[2].classList.value == 'animate-Scale'){
-                  animationIcon[2].classList.remove('animation-Scale');
-                  animationIcon[0].classList.add('animate-Scale')
-               }
-            },2500)
-         },3500);
+//             setTimeout( () => {
+//                animationIcon[1].classList.add('animate-Scale')
+//                animationIcon[0].classList.remove('animate-Scale')
+//                animationIcon[2].classList.remove('animate-Scale')
+//             },800)
+//             setTimeout( () => {
+//                if(animationIcon[1].classList.value == 'animate-Scale'){
+//                   animationIcon[1].classList.remove('animate-Scale');
+//                   animationIcon[2].classList.add('animate-Scale');
+//                }
+//             },1800)
+//             setTimeout( () => {
+//                if(animationIcon[2].classList.value == 'animate-Scale'){
+//                   animationIcon[2].classList.remove('animation-Scale');
+//                   animationIcon[0].classList.add('animate-Scale')
+//                }
+//             },2500)
+//          },3500);
 
-         setTimeout( () => {
+//          setTimeout( () => {
 
-            let right = 660;
-           let Interval = setInterval( () =>{
+//             let right = 660;
+//            let Interval = setInterval( () =>{
                
-                  if(right == 2000){
-                     clearInterval(Interval);
-                     console.log('Success!');
-                  } else{
-                     right = right + 13
-                  } 
-                 animationIcon[0].style.right = `${right}px` 
-            },0.1)
+//                   if(right == 2000){
+//                      clearInterval(Interval);
+//                      console.log('Success!');
+//                   } else{
+//                      right = right + 13
+//                   } 
+//                  animationIcon[0].style.right = `${right}px` 
+//             },0.1)
             
-            setTimeout
+//             setTimeout
 
-         },7500)
-      }
+//          },7500)
+//       }
 
-    },1500);
-   }
+//     },1500);
+//    }
+// --------------------------------------------------------------
 
-signBtn.onclick = () => {
-    event.preventDefault();
-    blurBlock.style.top = '0%'
-}
+// signBtn.onclick = () => {
+//     event.preventDefault();
+//     blurBlock.style.top = '0%'
+// }
 
-let closeBtn = document.querySelector('.blur-block .close-icon');
+// let closeBtn = document.querySelector('.blur-block .close-icon');
 
-closeBtn.onclick = () => {
-    blurBlock.style.top = '-100%'
-}
+// closeBtn.onclick = () => {
+//     blurBlock.style.top = '-100%'
+// }
 
 let smallPizza = document.querySelectorAll('.small')
 let averagePizza = document.querySelectorAll('.average')

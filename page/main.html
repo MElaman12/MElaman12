@@ -16,7 +16,7 @@
 </head>
 <body>
     
-    <div class="load-animation">
+    <!-- <div class="load-animation">
         <div class="title">
             <p>Загрузка.</p>
         </div>
@@ -27,43 +27,29 @@
             <img  src="../icons/pizza-slice.png" alt="Error">
         </div>
 
-    </div>
-    
-    <div class="wrapper">
+    </div> -->
 
-        <div class="box">
-        <img src="../icons/logo.png" class="logo animate__animated animate__flipInY" width="170px">
-        
-            <div class="top-items">
-                <p>Бесплатная доставка по городу</p>
-
-                <p>Звонок по номеру: +998 33 595 00 06</p>
-
-              <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-            </div>
-
-            <img  class='halal-logo' src="https://1000logos.net/wp-content/uploads/2021/02/Halal-logo.png" width="100px">
-
-    
-                 <div class="bottom-items animate__animated animate__zoomInDown">
-                      <a href="#">Пиццы</a>
-                      <a href="#">Комбо</a>
-                      <a href="#">Салаты</a>
-                      <a href="#">Напитки</a>
-                      <a href="#">Акции</a>
-                      <a href="#" class="about-us">О нас</a>
-                    </div>   
-                    <button class="cart">Корзина</button>
-
-            <div class="btns">
-                <div class="change-language">
-                    <a href="#" class="en">EN</a>
-                    <a href="#" class="ru">RU</a>
-                </div>
-                <button class="sign">Войти</button>
+    <header>
+        <div class="logo">
+            <img src="../icons/logo.png" alt="Error 404">
+        </div>
+        <div class="info">
+            <span>Бесплатная доставка по городу</span>
+            <div class="line"></div>
+            <span class="callText">Звонок по номеру: +998 33 595 00 06</span>
+            <img src="../icons/Halal-logo.png" alt="Halal-logo">
+            
+            <div class="section">
+                <a href="#">Пиццы</a>
+                <a href="#">Комбо</a>
+                <a href="#">Салаты</a>
+                <a href="#">Напитки</a>
+                <a href="#">Акции</a>
+                <a href="#">О нас</a>
             </div>
         </div>
-    </div>
+    </header>
+    
                 
             <div class="blur-block">
                 <div class="register-block">
@@ -115,6 +101,24 @@
             </div>
 
             <div class="pizza-menu">
+                <div class="first-pizza" style="margin: 0 35px;">
+                    
+                    <div class="pore">
+                        <img src="../icons/1.png" class='pizza-img'>
+                    </div>
+                
+                        <span class="title m">Пеперони</span>
+                        <p class="ingridients"></p>
+                        <p class="price"></p>
+                        <p class="scale">Выберите размер:</p>
+                        <div class="change-scale">
+                            <span class="small">Маленькая</span>
+                            <span class="average">Средняя</span>
+                            <span class="big">Большая</span>
+                        </div>
+                        <button class="add-cart">В корзину</button>
+                    </div>
+
                 <div class="first-pizza">
                     
                     <div class="pore">
@@ -126,9 +130,9 @@
                         <p class="price"></p>
                         <p class="scale">Выберите размер:</p>
                         <div class="change-scale">
-                            <span href="#" class="small">Маленькая</span>
-                            <span href="#" class="average">Средняя</span>
-                            <span href="#" class="big">Большая</span>
+                            <span class="small">Маленькая</span>
+                            <span class="average">Средняя</span>
+                            <span class="big">Большая</span>
                         </div>
                         <button class="add-cart">В корзину</button>
                     </div>
@@ -146,9 +150,9 @@
                     <p class="price"></p>
                     <p class="scale">Выберите размер:</p>
                     <div class="change-scale">
-                        <span href="#" class="small">Маленькая</span>
-                        <span href="#" class="average">Средняя</span>
-                        <span href="#" class="big">Большая</span>
+                        <span class="small">Маленькая</span>
+                        <span class="average">Средняя</span>
+                        <span class="big">Большая</span>
                     </div>
                     <button class="add-cart">В корзину</button>
                 </div>
@@ -164,9 +168,9 @@
                     <p class="price"></p>
                     <p class="scale">Выберите размер:</p>
                     <div class="change-scale">
-                        <span href="#" class="small">Маленькая</span>
-                        <span href="#" class="average">Средняя</span>
-                        <span href="#" class="big">Большая</span>
+                        <span  class="small">Маленькая</span>
+                        <span  class="average">Средняя</span>
+                        <span  class="big">Большая</span>
                     </div>
                     <button class="add-cart">В корзину</button>
                 </div>
@@ -278,6 +282,7 @@
         <script  src="../js/script.js"></script>
         <script src="../js/text.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="../js/pizzaScaleAn.js"></script>
    
 
         <script>
