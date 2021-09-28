@@ -8,6 +8,7 @@
     margin: 0;
     text-decoration: none;
     transition: 300ms !important;
+    user-select: none;
 }
 
 button{
@@ -81,6 +82,7 @@ body{
 header{
     padding: 0 100px;
     display: flex; align-items: center;
+    justify-content: center;
 }
 
 header .logo img{
@@ -88,7 +90,7 @@ header .logo img{
     margin-right: 30px;
 }
 
-header .info span:nth-child(1){
+header .info span.span1{
     color: #fff;
     font-family: montserrat-bold;
     display: inline-block;
@@ -110,7 +112,52 @@ header .info img{
     margin-bottom: -20px;
 }
 
-header .section {margin-top: 40px; background-color: #FF1332FF; padding: 5px; border-radius: 3px; width: fit-content;}
+header .info .someText{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+header .info .someText .change-language{
+    display: flex; align-items: center;
+    position: absolute; right: 515px; top: 40px;
+}
+
+header .info .someText .change-language .language{
+    margin-right: 10px;
+    display: flex;
+    align-items: center; justify-content: center;
+    background-color: #FF1332FF;
+    padding: 3px 7px;
+    border-radius: 20px;
+}
+
+header .info .someText .change-language .language span{
+    color: #fff; font-family: montserrat-bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+header .info .someText .change-language .language .line2{
+    background-color: #fff;
+    width: 1px; height: 20px; 
+    margin: 0 3px;
+}
+
+header .info .someText .change-language .BtnSign button{
+    color: #000; background-color: #fff;
+    padding: 5px; font-family: montserrat-bold; outline: none;
+    border-radius: 20px; border: none;
+}
+
+header .section {margin-top: 40px; display: flex; align-items: center;}
+
+header .section .link{
+    background-color: #FF1332FF;
+    border-radius: 3px;
+    padding: 5px;
+}
+
 header .section a{
     color: #fff;
     font-family: montserrat-bold;
@@ -119,12 +166,24 @@ header .section a{
     margin-right: 5px;
 }
 
+header .section .basketBlock button.btnBasket{
+    color: #FF1332FF;
+    font-family: montserrat-bold;
+    padding: 5px 7px;
+    font-size: 18px;
+    border-radius: 15px;
+    outline: none;
+    margin-left: 40px;
+    border: none;
+}
+
 header .section a:nth-child(1):hover{color: #000;}
 header .section a:nth-child(2):hover{color: #000;}
 header .section a:nth-child(3):hover{color: #000;}
 header .section a:nth-child(4):hover{color: #000;}
 header .section a:nth-child(5):hover{color: #000;}
 header .section a:nth-child(6):hover{color: #000;}
+
 
 /* ------------ */
 
@@ -331,6 +390,11 @@ header .section a:nth-child(6):hover{color: #000;}
     margin-left: 35px;
 }
 
+.food-menu .pizza-menu .first-pizza:nth-child(1),
+.food-menu .pizza-menu .first-pizza:nth-child(3){
+    margin: 0 35px;
+}
+
 .food-menu .pizza-menu .first-pizza span.title, .salad-menu .salads .first-salad span.salad-name, .drink-menu .drinks .first-drink span.drink-name{
     color: #FF1332FF;
     font-family: bold;
@@ -502,4 +566,71 @@ header .section a:nth-child(6):hover{color: #000;}
 
 .first-salad .bottom{
     margin: 15px 0;
+}
+/* ----------Корзина---------- */
+
+.wrapper{
+    margin-top: 100px;
+}
+
+.wrapper .box{
+    width: 800px;
+    height:600px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .box .zakaz1 {
+    display: flex; align-items: center;
+    padding-left: 35px;
+    padding-top: 20px;
+}
+.wrapper .box .zakaz1 img{
+    width: 100px;
+}
+
+.wrapper .box .zakaz1 .elName{
+    color: #FF1332FF;
+    font-family: bold;
+    font-size: 22px;
+    margin-left: 30px;
+}
+
+.wrapper .box .zakaz1 .scale{
+    color: rgb(146, 146, 146);
+    font-family: bold;
+    margin-left: 190px;
+}
+
+.wrapper .box .zakaz1 .price{
+    color: #000;
+    font-family: bold;
+    margin-left: 20px;
+}
+
+.wrapper .box .zakaz1 .counter span.elCount{
+    margin: 0 15px;
+}
+
+.wrapper .box .zakaz1 .counter span{
+    color: #fff;
+    font-family: bold;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.wrapper .box .zakaz1 .cancelIc{
+    width: 45px;
+    margin-left: 10px;
+    cursor: pointer;    
+}
+
+.wrapper .box .zakaz1 .counter{
+    padding: 5px 15px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 20px;
+    background-color: #FF1332FF;
+    margin-left: 20px;
 }
