@@ -1,0 +1,636 @@
+/* Подключаем шрифты */
+@import url(../fonts/fonts.css);
+/* --------------- */
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    transition: 300ms !important;
+    user-select: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+body{
+    width: 100%;
+    height: fit-content;
+    scroll-behavior: smooth;
+    background-color: #000;
+}
+
+/* --------------- */
+
+.load-animation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1111;
+    display: flex; justify-content: center; align-items: center;    flex-direction: column;
+}
+
+.load-animation p{
+    transition: 500ms;
+    color: #FF1332FF;
+    font-size: 65px;
+    font-family: bold;
+    margin-bottom: 40px;
+}
+
+.load-animation .icon{
+    width:fit-content;
+    height: 70px;
+}
+
+.load-animation .icon img{position: absolute; transition: 3s;}
+
+.animate-Scale{
+    animation: iconRotateAnimate 700ms 1 ease;
+    animation-delay: 500ms;
+}
+
+@keyframes iconRotateAnimate {
+        0%,100%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.3);
+        } 
+}
+
+.animate{
+    animation: loadAnimate  2.2s 1 ease;
+}
+
+@keyframes loadAnimate {
+    0%{
+        margin-top:600px;
+    }
+    50%,100%{
+        margin: 0px;
+    }
+}
+
+/* ------------- */
+
+header{
+    padding: 0 100px;
+    display: flex; align-items: center;
+    justify-content: center;
+}
+
+header .logo img{
+    width: 200px;
+    margin-right: 30px;
+}
+
+header .info span.span1{
+    color: #fff;
+    font-family: montserrat-bold;
+    display: inline-block;
+    width: 210px;
+    font-size: 17px;
+}
+
+header .info span.callText{
+    color: #fff;
+    font-family: montserrat-bold;
+    display: inline-block;
+    width: 170px;
+}
+
+header .info .line{width: 2px; height: 40px; background-color: #9C9D9EFF; display: inline-block; margin: -5px 10px;}
+
+header .info img{
+    width: 100px;
+    margin-bottom: -20px;
+}
+
+header .info .someText{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+header .info .someText .change-language{
+    display: flex; align-items: center;
+    position: absolute; right: 515px; top: 40px;
+}
+
+header .info .someText .change-language .language{
+    margin-right: 10px;
+    display: flex;
+    align-items: center; justify-content: center;
+    background-color: #FF1332FF;
+    padding: 3px 7px;
+    border-radius: 20px;
+}
+
+header .info .someText .change-language .language span{
+    color: #fff; font-family: montserrat-bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+header .info .someText .change-language .language .line2{
+    background-color: #fff;
+    width: 1px; height: 20px; 
+    margin: 0 3px;
+}
+
+header .info .someText .change-language .BtnSign button{
+    color: #000; background-color: #fff;
+    padding: 5px; font-family: montserrat-bold; outline: none;
+    border-radius: 20px; border: none;
+}
+
+header .section {margin-top: 40px; display: flex; align-items: center;}
+
+header .section .link{
+    background-color: #FF1332FF;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+header .section a{
+    color: #fff;
+    font-family: montserrat-bold;
+    font-size: 18px;
+    transition: 300ms;
+    margin-right: 5px;
+}
+
+header .section .basketBlock button.btnBasket{
+    color: #FF1332FF;
+    font-family: montserrat-bold;
+    padding: 5px 7px;
+    font-size: 18px;
+    border-radius: 15px;
+    outline: none;
+    margin-left: 40px;
+    border: none;
+}
+
+header .section a:nth-child(1):hover{color: #000;}
+header .section a:nth-child(2):hover{color: #000;}
+header .section a:nth-child(3):hover{color: #000;}
+header .section a:nth-child(4):hover{color: #000;}
+header .section a:nth-child(5):hover{color: #000;}
+header .section a:nth-child(6):hover{color: #000;}
+
+
+/* ------------ */
+
+
+.blur-block{
+    width: 100%; height: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: -100%;
+    backdrop-filter: blur(7px);
+}
+
+.inputs .name-inpt img, .inputs .number-inpt img{
+    margin: 10px 0;
+}
+
+.inputs .name-inpt input::placeholder, .inputs .number-inpt  input::placeholder{
+    color: #FF1332FF;
+    font-family: bold;
+    font-size: 18px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputs .name-inpt, .inputs .number-inpt{
+    display: flex;
+    margin: 10px 0;
+}
+
+.inputs .name-inpt input, .inputs .number-inpt input{
+    margin: 0 6px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(153, 153, 153);
+    outline: none;
+    font-size: 17px;
+    font-family: bold;
+    color: #FF1332FF;
+}   
+
+.blur-block .inputs .send-code{
+    width: fit-content; height: fit-content;
+    padding: 15px 30px;
+    font-family: bold ;
+    font-size: 20px;
+    background-color: #FF1332FF;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    margin: 35px 0;
+    position: relative;
+    z-index: 11;
+    overflow: hidden;
+}
+
+.blur-block .inputs .send-code::after{
+    width: 100%; height: 100%;
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    background-color: #000;
+    z-index: -1;
+    transition: 200ms;
+    border-radius: 30px;
+}
+
+.blur-block .inputs .send-code:hover::after{
+    left: 0;
+    top: 0;
+}
+
+.blur-block .register-block{
+    width: 320px; height: 320px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.blur-block .close-icon{
+    position: absolute;
+    right: 50px;
+    top: 60px;
+    cursor: pointer;
+    width: 60px;
+}
+
+.blur-block .register-block .top{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(117, 113, 113);
+    padding: 3px 0;
+}
+
+.blur-block .register-block .top a{
+    font-family: bold;
+    font-size: 20px;
+}
+
+.blur-block .register-block .top a:nth-child(1){
+    color: #B9B9B9FF;
+}
+
+.blur-block .register-block .top a:nth-child(2){
+    color: #FF1332FF;
+}
+
+.cart{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    border: none;
+    color: #FF1332FF;
+    font-size: 16px;
+    font-family: bold;
+    background-color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: 47%;
+    right: 30px;
+}
+/* Конец */
+
+/* ------------ Слайдер ------------ */
+
+.swiper{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 80%;
+    border-radius: 20px;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+/* Конец */
+
+/* Стили пиццы и т.д */
+.food-menu{
+    width: 100%;
+    height: fit-content;
+}
+
+.food-menu .title p, .drink-menu .title p{
+    color: #fff;
+    font-family: montserrat-bold;
+    margin-left: 100px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.food-menu .pizza-menu, .salad-menu .salads , .drink-menu .drinks{
+    display: flex;
+    justify-content: center;    
+}
+
+.food-menu .pizza-menu .first-pizza , .salad-menu .salads .first-salad, .drink-menu .drinks .first-drink {
+    width: 300px; height: 490px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.pore{
+
+    display: flex; align-items: center; justify-content: center;
+}
+
+.food-menu .pizza-menu .first-pizza  img{
+    margin: 0% !important;
+}
+
+.food-menu .pizza-menu .first-pizza  img, .salad-menu .salads .first-salad img, .drink-menu .drinks .first-drink img{
+    width: 220px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+}
+
+.food-menu .pizza-menu .first-pizza:nth-child(1),
+.food-menu .pizza-menu .first-pizza:nth-child(3){
+    margin: 0 35px;
+}
+
+.food-menu .pizza-menu .first-pizza span.title, .salad-menu .salads .first-salad span.salad-name, .drink-menu .drinks .first-drink span.drink-name{
+    color: #FF1332FF;
+    font-family: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.salad-menu .salads .first-salad, .drink-menu .drinks .first-drink{
+    height: 380px;
+}
+
+.food-menu .pizza-menu .first-pizza p.ingridients{
+    font-family: bold;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.salad-menu .salads .first-salad p.storage, .drink-menu .drinks .first-drink p.storage{
+    font-size: 11px;
+    font-family: montserrat-bold;
+    margin-bottom: 30px;
+}
+
+.food-menu .pizza-menu .first-pizza p.price, .salad-menu .salads .first-salad span.price, .drink-menu .drinks .first-drink span.price{
+    font-family: bold;
+    font-size: 20px;
+}
+
+.salad-menu .salads .first-salad .bottom, .drink-menu .drinks .first-drink .bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.salad-menu .salads .first-salad .bottom button, .drink-menu .drinks .first-drink .bottom button
+{
+    width: fit-content; height: fit-content;
+    padding: 5px 2ex;
+    background-color: #FF1332FF;
+    color: #fff;
+    font-family: montserrat-bold;
+    font-size: 16px;
+    position: relative;
+    border-radius: 10px;
+    border: none;
+    z-index: 11;
+    overflow: hidden;
+}
+
+.salad-menu .salads .first-salad .bottom button::before{
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%; 
+    background-color: #fff;
+    z-index: -1;
+    top: 0;
+    left: -100%;
+    border-radius: 10px;
+    transition: 300ms;
+}
+
+.first-drink:nth-child(2){
+    margin: 0 35px ;
+}
+
+.drink-menu .drinks .first-drink .bottom button::before{
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%; 
+    background-color: #fff;
+    z-index: -1;
+    top: 0;
+    left: -100%;
+    border-radius: 10px;
+    transition: 300ms;
+} 
+
+.salad-menu .salads .first-salad .bottom button:hover:before{
+    left: 0%;
+}
+
+.drink-menu .drinks .first-drink .bottom button:hover::before
+{
+    left: 0%;
+}
+
+.drink-menu .drinks .first-drink .bottom button:hover{
+    color: #FF1332FF;
+    box-shadow: 7px 7px 7px rgb(145, 145, 145);
+}
+
+.salad-menu .salads .first-salad .bottom button:hover{
+    color: #FF1332FF;
+    box-shadow: 7px 7px 7px rgb(145, 145, 145);
+}
+
+.food-menu .pizza-menu .first-pizza p.scale{
+    color: rgb(148, 149, 151);
+    font-family: bold;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.food-menu .first-pizza .change-scale{
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid #FF1332FF;
+    border-radius: 20px;
+    padding: 5px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food-menu .first-pizza .change-scale span{
+    color: #000;
+    font-family: bold;
+    margin: 0 5px;
+    font-size: 17.5px;
+    cursor: pointer;
+}
+
+
+.food-menu .pizza-menu .first-pizza button{
+    color: #fff;
+    display: flex;
+    font-size: 20px;
+    font-family: bold;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: #FF1332FF;
+    border-radius: 25px;
+    border: none;
+    margin-top: 20px;
+    position: relative;
+    z-index: 11 ;
+    overflow: hidden;
+}
+
+.food-menu .pizza-menu .first-pizza button::after{
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    left: 0%;
+    top: -200%;
+    z-index: -1;
+    background-color: #fff;
+    transition: 300ms;
+}
+
+.food-menu .pizza-menu .first-pizza button:hover:after{
+    top: 0;
+    left: 0;
+    right: 0%;
+}
+
+.food-menu .pizza-menu .first-pizza button:hover{
+    color: #FF1332FF;
+    box-shadow: 7px 7px 7px rgb(145, 145, 145);
+}
+
+.salads .title p{
+    margin-top: 20px;
+}
+
+.center{
+    margin: 0 35px;
+}
+
+.first-salad .bottom{
+    margin: 15px 0;
+}
+/* ----------Корзина---------- */
+
+.wrapper{
+    margin-top: 100px;
+}
+
+.wrapper .box{
+    width: 800px;
+    height:600px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .box .zakaz1 {
+    display: flex; align-items: center;
+    padding-left: 35px;
+    padding-top: 20px;
+}
+.wrapper .box .zakaz1 img{
+    width: 100px;
+}
+
+.wrapper .box .zakaz1 .elName{
+    color: #FF1332FF;
+    font-family: bold;
+    font-size: 22px;
+    margin-left: 30px;
+}
+
+.wrapper .box .zakaz1 .scale{
+    color: rgb(146, 146, 146);
+    font-family: bold;
+    margin-left: 190px;
+}
+
+.wrapper .box .zakaz1 .price{
+    color: #000;
+    font-family: bold;
+    margin-left: 20px;
+}
+
+.wrapper .box .zakaz1 .counter span.elCount{
+    margin: 0 15px;
+}
+
+.wrapper .box .zakaz1 .counter span{
+    color: #fff;
+    font-family: bold;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.wrapper .box .zakaz1 .cancelIc{
+    width: 45px;
+    margin-left: 10px;
+    cursor: pointer;    
+}
+
+.wrapper .box .zakaz1 .counter{
+    padding: 5px 15px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 20px;
+    background-color: #FF1332FF;
+    margin-left: 20px;
+}
