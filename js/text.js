@@ -45,7 +45,7 @@ let saladTitle = document.querySelectorAll('.salad-name');
 let saladPrice = document.querySelectorAll('.first-salad .price')
 let saladStorage = document.querySelectorAll('.first-salad .storage')
 
-// // ------
+// ------
 
 let ingridients = document.querySelectorAll('.ingridients');
 
@@ -58,7 +58,7 @@ let drinkPrice = document.querySelectorAll('.first-drink .price')
 
 let drinkStorage = document.querySelectorAll('.first-drink .storage')
 
-for(let i = 0; saladStats.length > 0; i++){
+for(let i = 0; i < PizzaPrice.length; i++){
     PizzaPrice[i].textContent = pizzaStats[0].price;
 
     ingridients[i].textContent = pizzaStats[0].ingridients;
